@@ -15,6 +15,12 @@ public class Main {
         myFamily.add(new Person("Zephaniah", "Hughes", 9));
         myFamily.add(new Person("Ezra", "Aiden", 17));
 
+
+        // Bonus
+        myFamily.add(new Person("Amy", "Wyatt", 40));
+        // same first + last as Dana Wyatt (63)!
+        myFamily.add(new Person("Dana", "Wyatt", 20));
+
         Collections.sort(myFamily);
 
         for ( Person person : myFamily) {

@@ -40,8 +40,19 @@ public class Person implements Comparable<Person> {
         return firstName + " " + lastName + " (" + age + ")";
     }
 
+    // Bonus
     @Override
     public int compareTo(Person o) {
-        return this.lastName.compareTo(o.lastName);
+        int result = this.lastName.compareTo(o.lastName);
+
+        if (result == 0) {
+            result = this.firstName.compareTo(o.firstName);
+        }
+
+        if (result == 0) {
+            result = Integer.compare(this.age, o.age);
+        }
+
+        return result;
     }
 }
